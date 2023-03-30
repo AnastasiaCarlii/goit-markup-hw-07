@@ -11,6 +11,18 @@
   --footer-special-color: #31d0aa;
   --modal-color: #8e8f99;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -34,14 +46,24 @@ svg {
   max-width: 100%;
   height: auto;
 }
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: var(--title-text-color);
+  font-style: normal;
+  padding: 24px 0;
+}
 
 .container {
-  max-width: 1158px;
+  /* max-width: 1158px; */
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 16px;
+  padding: 0 15px;
 }
+
 .section {
   padding: 120px 0;
 }
@@ -75,7 +97,7 @@ svg {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 408px;
+  max-width: 392px;
   height: 576px;
   padding: 72px 24px 24px 24px;
   overflow: auto;
@@ -294,15 +316,6 @@ svg {
 .contact-item .link:hover {
   color: var(--special-buttons-color);
 }
-.list {
-  list-style: none;
-}
-.link {
-  text-decoration: none;
-  color: var(--title-text-color);
-  font-style: normal;
-  padding: 24px 0;
-}
 
 .link.current::after {
   content: "";
@@ -349,18 +362,29 @@ svg {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero.jpg);
+    url(../images/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-mobile.jpg);
+  }
+}
 
 .hero-title {
-  font-size: 56px;
+  max-width: 320px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
   text-align: center;
-  line-height: 60px;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: var(--primary-white-color);
-  max-width: 496px;
   margin: 0 auto 48px;
 }
 
@@ -390,37 +414,20 @@ svg {
 
 /* SECTION ADVANTAGES */
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden;
-}
 .description {
   display: flex;
   gap: 48px 24px;
   flex-wrap: wrap;
 }
 .benefits {
-  flex-basis: calc((100% - 72px) / 4);
+  /* flex-basis: calc((100% - 72px) / 4); */
 }
 .benefits-place {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 24px 10px;
-  background: var(--buttons-background-color);
-  border-radius: 4px;
+  display: none;
 }
 
 .feature-title {
+  text-align: center;
   margin-top: 8px;
   margin-bottom: 8px;
 
@@ -442,6 +449,10 @@ svg {
 /* SECTION ADVANTages */
 
 /* WHAT ARE WE DOING SECTION */
+
+/* WHAT ARE WE DOING SECTION */
+
+/* ////////////OUR TEAM SECTION */
 .subject-name {
   font-size: 36px;
   line-height: 40px;
@@ -450,22 +461,11 @@ svg {
   text-transform: capitalize;
   color: var(--title-text-color);
 }
-.task {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 72px;
-}
-.task_item {
-  flex-basis: calc((100% - 48px) / 3);
-}
-
-/* WHAT ARE WE DOING SECTION */
-
-/* ////////////OUR TEAM SECTION */
 
 .team {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
   margin-top: 72px;
   background: var(--buttons-background-color);
@@ -476,7 +476,8 @@ svg {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-  flex-basis: calc((100% - 72px) / 4);
+
+  /* flex-basis: calc((100% - 72px) / 4); */
 }
 .team-content {
   text-align: center;
@@ -533,6 +534,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 24px;
   margin-top: 72px;
   margin-bottom: 120px;
