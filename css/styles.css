@@ -57,15 +57,30 @@ svg {
 }
 
 .container {
-  /* max-width: 1158px; */
+  max-width: 428px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
+}
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 120px 0;
+  }
 }
 
 /* MODAL */
@@ -130,7 +145,7 @@ svg {
   background-color: var(--accent-color);
   color: var(--footer-text-color);
 }
-.mobile-icone {
+.mobile-icon {
   fill: var(--primary-text-color);
 }
 .modal-close-btn-icon {
@@ -256,6 +271,28 @@ svg {
 }
 /* MODAL */
 /* MOBILE MENU */
+
+.page-header {
+  border-bottom: 1px solid rgba(231, 233, 252, 1);
+}
+@media screen and (max-width: 767px) {
+  .page-header {
+    min-height: 70px;
+  }
+}
+
+.menu-box {
+  display: flex;
+  align-items: center;
+}
+.mobile-menu-btn {
+  display: block;
+  background-color: transparent;
+  padding: 0;
+  margin-left: auto;
+  border: none;
+}
+
 .header-nav-wrap {
   display: none;
   position: fixed;
@@ -268,7 +305,6 @@ svg {
 }
 .header-nav-wrap.is-open {
   display: block;
-  
 }
 .close-menu-btn {
   position: absolute;
@@ -287,7 +323,6 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  width
 }
 
 /* .menu-content {
@@ -305,135 +340,127 @@ svg {
 } */
 
 .menu-content {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .menu-container.is-open {
-	transform: translateX(0);
+  transform: translateX(0);
 }
 .header-nav-wrap .close-menu-btn {
-	position: absolute;
-	top: 24px;
-	right: 16px;
-	color:var(--primary-white-color);
+  position: absolute;
+  top: 24px;
+  right: 16px;
+  color: var(--primary-white-color);
 }
 .header-nav-wrap .close-menu-btn {
-	width: 24px;
-	height: 24px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: var(--footer-text-color);
-	border-radius: 50%;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--footer-text-color);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .close-menu-btn {
-	border: none;
-	background: transparent;
+  border: none;
+  background: transparent;
 }
 
 .mobile-menu {
-	
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	display: flex; 
-	flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
-.burger-link{
-	margin-bottom: 40px;
-	display: block;
-	
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.11;
+.burger-link {
+  margin-bottom: 40px;
+  display: block;
 
-	letter-spacing: 0.02em;
-	text-transform: capitalize;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
 
-	color: #2e2f42;
-	text-decoration: none;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+
+  color: #2e2f42;
+  text-decoration: none;
 }
 
 .mobile-menu .link {
-	
-	display: block;
-	
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.11;
+  display: block;
 
-	letter-spacing: 0.02em;
-	text-transform: capitalize;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
 
-	color: #2e2f42;
-	text-decoration: none;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+
+  color: #2e2f42;
+  text-decoration: none;
 }
 .mobile-menu .menu-contacts {
-	color:var(--special-buttons-color);
+  color: var(--special-buttons-color);
 }
-.mobile-wrap{
-	
-	margin-top: auto;
-	
+.mobile-wrap {
+  margin-top: auto;
 }
 
 .buger-list {
-	margin-top: 40px;
+  margin-top: 40px;
 }
 .burger-mail {
-	font-style: normal;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 1.2;
-	letter-spacing: 0.02em;
-	
-	color:var(--primary-text-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
 }
 
 .burger-tel {
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 1.66;
-	font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.66;
+  font-style: normal;
 
-	
-
-	color:var(--accent-color);
+  color: var(--accent-color);
 }
 
 .mobile-list {
-	display: flex;
-	justify-content: flex-start;
-	
-	gap: 28px;
-	margin-top: 48px;
+  display: flex;
+  justify-content: flex-start;
+
+  gap: 28px;
+  margin-top: 48px;
 }
 
 .mobile-list-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	fill: var(--primary-white-color);
-	background: var(--accent-color);
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--primary-white-color);
+  background: var(--accent-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 /* MOBILE MENU */
 
 /* ...........HEADER */
-.page-header {
-  border-bottom: 1px solid rgba(231, 233, 252, 1);
-}
+
 /* LOGO */
 
 .logo {
-  margin-right: 76px;
+  /* margin-right: 76px; */
   font-family: "Raleway";
   font-weight: 800;
   font-size: 18px;
@@ -461,9 +488,9 @@ svg {
   margin-right: 40px;
 }
 .main-nav {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
 }
 .site-nav .list .link {
   text-decoration: none;
@@ -532,7 +559,7 @@ svg {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi),{
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -749,7 +776,7 @@ svg {
 .second-logo-footer {
   color: var(--buttons-background-color);
 }
-.logo-footer{
+.logo-footer {
   justify-content: center;
   align-items: center;
 }
@@ -757,7 +784,6 @@ svg {
   margin-top: 100px;
 }
 .footer-text {
-  
   text-align: justify;
 
   margin-top: 16px;
@@ -822,7 +848,6 @@ svg {
   padding: 8px 16px;
 }
 
-
 .footer-form {
   /* margin-left: 80px;
   width: 453px; */
@@ -830,7 +855,6 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .button-subscribe {
