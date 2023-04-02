@@ -2,6 +2,20 @@
   .container {
     max-width: 1190px;
   }
+  .site-nav {
+    display: flex;
+
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+  }
+  .site-contacts {
+    display: flex;
+    margin-left: auto;
+
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+  }
   .hero {
     text-align: center;
     padding: 188px 0;
@@ -28,6 +42,9 @@
         ),
         url(../images/hero.jpg);
     }
+  }
+  .page-header {
+    border-bottom: 1px solid rgba(231, 233, 252, 1);
   }
 
   .hero-title {
@@ -103,5 +120,21 @@
 
   .task_item {
     flex-basis: calc((100% - 48px) / 3);
+  }
+  .footer {
+    background: var(--title-text-color);
+    padding: 100px 0;
+    width: 100%;
+  }
+  .footer-display {
+    display: flex;
+    margin-left: 156px;
+  }
+  .footer-form {
+    margin-left: 80px;
+    width: 453px;
+  }
+  .mobile-menu-btn {
+    display: none;
   }
 }
