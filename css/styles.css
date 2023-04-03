@@ -519,7 +519,7 @@ body {
 @media screen and (min-width: 768px) {
   .site-contacts {
     display: block;
-    margin: 24px 16px;
+
     gap: 6px;
   }
 }
@@ -605,7 +605,7 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact-item:not(:last-child) {
-    margin-bottom: 12px;
+    padding-bottom: 6px;
   }
 }
 
@@ -1017,6 +1017,10 @@ body {
   .modal {
     max-width: 408px;
   }
+  .contact-item {
+    font-size: 12px;
+    line-height: 1.16;
+  }
   .footer-container {
     display: flex;
   }
@@ -1065,6 +1069,15 @@ body {
   .site-contacts {
     display: flex;
     gap: 40px;
+  }
+  .contact-item {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .feature-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   .hero {
