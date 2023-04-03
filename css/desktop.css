@@ -1,7 +1,12 @@
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1190px;
+    max-width: 1158px;
   }
+
+  .section {
+    padding: 120px 0;
+  }
+
   .site-nav {
     display: flex;
 
@@ -9,40 +14,20 @@
     letter-spacing: 0.02em;
     color: var(--title-text-color);
   }
+  .header-mail,
+  .header-tel {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
   .site-contacts {
     display: flex;
     margin-left: auto;
-
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
   }
-  .hero {
-    text-align: center;
-    padding: 188px 0;
-    margin: 0 auto;
-    flex-grow: 1;
-    max-width: 1440px;
-    width: 100%;
-    background-size: cover;
-    background: var(--title-text-color);
 
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), {
-    .hero {
-      background-image: linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url(../images/hero.jpg);
-    }
-  }
   .page-header {
     border-bottom: 1px solid rgba(231, 233, 252, 1);
   }
@@ -84,25 +69,7 @@
     max-width: 496px;
     margin: 0 auto 48px;
   }
-  .team-section-item {
-    flex-basis: calc((100% - 72px) / 4);
-  }
-  .benefits {
-    flex-basis: calc((100% - 72px) / 4);
-  }
 
-  .benefits-place {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 24px 10px;
-    background: var(--buttons-background-color);
-    border-radius: 4px;
-  }
-  .section-third {
-    display: block;
-  }
   .subject-name {
     font-size: 36px;
     line-height: 40px;
@@ -111,16 +78,7 @@
     text-transform: capitalize;
     color: var(--title-text-color);
   }
-  .task {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    margin-top: 72px;
-  }
 
-  .task_item {
-    flex-basis: calc((100% - 48px) / 3);
-  }
   .footer {
     background: var(--title-text-color);
     padding: 100px 0;
@@ -134,7 +92,12 @@
     margin-left: 80px;
     width: 453px;
   }
-  .mobile-menu-btn {
+  .footer-container {
+    margin-left: 120px;
+    width: 208px;
+  }
+
+  * .mobile-menu-btn {
     display: none;
   }
 }
